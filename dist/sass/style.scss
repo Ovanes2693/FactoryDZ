@@ -1,0 +1,162 @@
+// custom var
+@import "custom";
+
+// fonts 
+@import "fonts";
+
+// reset 
+@import "reset";
+
+// default-class 
+@import "default-class";
+
+// layout 
+@import "layout";
+
+// slick slider
+@import "slick";
+
+.full-height {
+	&[data-animate]{
+		@extend %homePageBeforeAnimate;
+
+		&.animate{
+			@extend %homePageAfterAnimate;
+		}
+	}
+}
+.sm-12{
+	&[data-animate]{
+		.sm-6{
+			transition: opacity 0.6s 0s cubic-bezier(0.19, 1, 0.22, 1), transform 0.6s 0s cubic-bezier(0.19, 1, 0.22, 1);
+      		opacity: 0;
+			transform: translateY(60px);
+		}
+		&.animate{
+			.sm-6 {
+				transition: opacity 0.5s 0.15s cubic-bezier(0.19, 1, 0.22, 1), transform 0.5s 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+			}
+			.sm-6{
+				opacity: 1;
+				transform: translateY(0);
+				& + .sm-6 {
+					transition: opacity 0.6s 0.3s cubic-bezier(0.19, 1, 0.22, 1), transform 0.6s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+				}
+			}
+		}
+	}
+}
+
+.corusel-content{
+	img {
+		display: block;
+		background-size: 100% 100%;
+	}
+	h3 {
+		padding-top: 70px;
+		font-size: 70px;
+		color: $whiteTextColor;
+		font-weight: 900;
+	}
+	p {
+		font-size: 26px;
+		padding-top: 75px;
+		color: $whiteTextColor;
+		font-weight: 900;
+		line-height: 1.5;
+	}
+}
+
+.custom-game-development {
+	position: relative;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+		h3 {
+	      padding: 0 20px;
+	      color: $whiteTextColor;
+	      font-size: 70px;
+	      margin: 63px 0 50px;
+	      text-align: center;
+	      display: inline-block;
+	      margin-top: 150px;
+	    }
+	    p {
+	      font-weight: 500;
+	      color: $whiteTextColor;
+	      padding: 0 20px;
+	      text-align: center;
+	      font-size: 26px;
+	      line-height: 1.5;
+	  	}
+	  	a.btn {
+	  	margin-top: 90px;
+	  }
+}
+
+.art-production{
+	display: flex;
+}
+.cross-platform{
+	display: flex;
+}
+.smart{
+	display: flex;
+}
+.about-us{
+	display: flex;
+	span.title{
+		color: #78859c;
+		margin-bottom: 70px;
+	}
+	.text{
+		color: #20222e;
+		width: 80px;
+	}
+	span.text+.text{
+		margin-top: 45px;
+	}
+}
+.footer-corusel .corusel-content{
+	justify-content: space-between;
+	h3{
+		margin-top: 100px;
+	}
+	p {
+		font-weight: 500;
+		margin-bottom: 130px;
+	}
+	span {
+		padding-top: 30px;
+    	text-transform: uppercase;
+    	text-align: right;
+    	display: block;
+	}
+}
+// MAIN END
+
+
+// footer start
+
+.footer {
+	height: 200px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer .info {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+// style fot animate 
